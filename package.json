@@ -9,11 +9,11 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -31,16 +31,28 @@
     "url": "https://github.com/val-samonte/type-dgraph/issues"
   },
   "homepage": "https://github.com/val-samonte/type-dgraph#readme",
+  "peerDependencies": {
+    "dgraph-js": "^2.0.2",
+    "grpc": "^1.24.0",
+    "reflect-metadata": "^0.1.13"
+  },
   "devDependencies": {
+    "@types/google-protobuf": "^3.7.2",
     "@types/jest": "^24.0.19",
+    "@types/protobufjs": "^6.0.0",
+    "dgraph-js": "^2.0.2",
+    "grpc": "^1.24.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "reflect-metadata": "^0.1.13",
     "ts-jest": "^24.1.0",
+    "ts-node-dev": "^1.0.0-pre.43",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.4"
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {}
 }
