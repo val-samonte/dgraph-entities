@@ -1,5 +1,5 @@
 {
-  "name": "type-dgraph",
+  "name": "dgraph-entities",
   "version": "0.0.1",
   "description": "Dgraph schema helper using decorators",
   "main": "lib/index.js",
