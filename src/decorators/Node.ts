@@ -7,21 +7,42 @@ export const Node = () => {
 
 /*
 
+@Node()
+class User {
+
+  @Predicate(exact)
+  name: string;
+
+  @Predicate(int)
+  age: number;
+
+  @Predicate(reverse, count)
+  follows: User[];
+}
+
+// Query
 entity(User)
   .select([
     'uid',
     'name', 
     'age',
-    subentity('follows') // has type User[]
+    subentity('follows')
       .select([
         'uid',
         'name', 
-        'age'
+        'age',
+        reverse(User, 'follows', 'followers') 
+          .select([
+            'name'
+          ])
       ])
+    count('follows', 'follows_count')
   ])
   .whereUid('0x3')
+  .anyOfTerms('name', 'foo bar')
   .commit()
 
+// Mutation
 entity(User)
   .create({
     name: 'Foo',
