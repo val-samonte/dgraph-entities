@@ -1,7 +1,9 @@
 
-export const Node = () => {
-  return (target: string, key: string) => {
+// https://github.com/Microsoft/TypeScript/issues/7169
 
+export const Node = () => {
+  return (target: any) => {
+    
   }
 }
 

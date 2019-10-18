@@ -25,20 +25,23 @@
 
 //// password
 
-export const reverse  = Symbol('directive:reverse');
-export const count    = Symbol('directive:count');
-export const upsert   = Symbol('directive:upsert');
-export const year     = Symbol('datetime:index:year');
-export const month    = Symbol('datetime:index:month');
-export const day      = Symbol('datetime:index:day');
-export const hour     = Symbol('datetime:index:hour');
-export const exact    = Symbol('string:index:exact');
-export const hash     = Symbol('string:index:hash');
-export const term     = Symbol('string:index:term');
-export const fulltext = Symbol('string:index:fulltext');
-export const trigram  = Symbol('string:index:trigram');
-export const password = Symbol('password');
+export const reverse    = Symbol('directive:reverse');
+export const count      = Symbol('directive:count');
+export const upsert     = Symbol('directive:upsert');
+export const year       = Symbol('datetime:index:year');
+export const month      = Symbol('datetime:index:month');
+export const day        = Symbol('datetime:index:day');
+export const hour       = Symbol('datetime:index:hour');
+export const exact      = Symbol('string:index:exact');
+export const hash       = Symbol('string:index:hash');
+export const term       = Symbol('string:index:term');
+export const fulltext   = Symbol('string:index:fulltext');
+export const trigram    = Symbol('string:index:trigram');
+export const int        = Symbol('int');
+export const geo        = Symbol('geo');
+export const password   = Symbol('password');
 
+// todo: add conditional constraints for other combinations
 export type PredicateOptions = 
   typeof reverse | 
   typeof count | 
@@ -52,8 +55,7 @@ export type PredicateOptions =
   typeof term | 
   typeof fulltext | 
   typeof trigram | 
-  typeof password;
+  typeof password |
+  typeof int |
+  typeof geo;
 
-const a = (...args: PredicateOptions[]) => {
-
-}

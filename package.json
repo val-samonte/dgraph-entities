@@ -7,6 +7,7 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
+    "start": "ts-node-dev ./src/index.ts",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@types/google-protobuf": "^3.7.2",
     "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
     "@types/protobufjs": "^6.0.0",
     "dgraph-js": "^2.0.2",
     "grpc": "^1.24.0",
