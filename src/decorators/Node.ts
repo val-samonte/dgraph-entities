@@ -10,14 +10,18 @@ export const Node = () => {
 /*
 
 @Node()
+@ObjectType()
 class User {
 
+  @Field()
   @Predicate(exact)
   name: string;
 
+  @Field()
   @Predicate(int)
   age: number;
 
+  @Field()
   @Predicate(reverse, count)
   follows: User[];
 }

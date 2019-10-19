@@ -40,6 +40,7 @@ export const trigram    = Symbol('string:index:trigram');
 export const int        = Symbol('int');
 export const geo        = Symbol('geo');
 export const password   = Symbol('password');
+export const generic    = Symbol('generic');
 
 // todo: add conditional constraints for other combinations
 export type PredicateOptions = 
@@ -57,5 +58,6 @@ export type PredicateOptions =
   typeof trigram | 
   typeof password |
   typeof int |
-  typeof geo;
+  typeof geo | 
+  typeof generic;
 
